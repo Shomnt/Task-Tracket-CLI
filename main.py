@@ -108,6 +108,9 @@ if __name__ == '__main__':
         sys.exit(1)
 
     if args[1] == "add":
+        if len(args) < 3:
+            print("You should specify a description")
+            sys.exit(1)
         TaskCommand.add(args[2])
         sys.exit(1)
     if args[1] == "delete":
